@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #ta
+        {
+            margin-left: 10%;
+        }
+       
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+$("#btn1").click(function(){
+    console.log($('#n').val());
+    // var bla = $('#n').val();
+    var tdCnt=0;
+    
+    $('table ').each(function(){
+        $('<tr><td>').append
+            // ('<input type="text" value'=$('#n').val() )
+        $('<input />', {
+            type : 'checkbox',
+            id : 'td' + tdCnt,
+            value : bla
+        }).appendTo($(this));
+        $('</td>').appendTo($(this));
+        tdCnt++;
+    });
+  });
+//   $("#btn2").click(function(){
+//     const del=$("tr").val();
+
+
+// for (var i = 0; i <  tr.length; i++) {
+//   if (tr[i].checked) {
+//     console.log(tr[i].value);
+//  var   sub=tr[i].value;
+//   }
+  
+
+// //   })
+   
+   });
+</script>
+</head>
+<body>
+    <label>Name<input type="text"id="n"></label>
+    <button id="btn1">Add customer details</button>
+    <table border="1" id="ta">
+   <tr>
+    <th>SELECT</th>
+    <th>NAME</th>
+   </tr>
+<tr>
+    <td><input type="checkbox"></td>
+    <td>ttyyy</td>
+</tr>
+<tr>
+    <td><input type="checkbox"></td>
+    <td>cgvhj</td>
+</tr>
+</table> 
+<button id="btn2">Delete customer details</button>
+</body>
+</html>
